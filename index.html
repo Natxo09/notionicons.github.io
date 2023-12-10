@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Icons</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="notion.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img id="notion-icon" src="https://img.icons8.com/ios-filled/250/000000/notion.png" alt="Notion Icon" class="notion-icon">
+            <span class="notion-title">Notion Icons</span>
+            <div class="theme-switch">
+                <span class="mode-text light-mode-text">Light</span>
+                <label class="switch">
+                    <input type="checkbox" id="switch">
+                    <span class="slider round"></span>
+                </label>
+                <span class="mode-text dark-mode-text">Dark</span>
+            </div>
+        </div>
+        <div class="description">
+            Notion Icons is a website to easily copy icons from <a href="https://icons8.com" target="_blank">icons8</a> for your <span class="notion-word">Notion</span> pages.
+        </div>
+        <div class="divider"></div> <!-- Segunda línea divisoria -->
+        <div class="input-group mb-3">
+            <input type="text" id="search-input" class="form-control" placeholder="Search by name">
+        </div>        
+        
+        <div id="icons-container"></div> <!-- Contenedor para los iconos -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO15I9BtuONpth9eR+P5UDO5UVG8bFjF4" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+<div class="footer">
+    <div class="footer-content">
+        <p>&copy; 2023 Notion Icons by <a href="https://github.com/Natxo09">Natxo</a> <span class="fas fa-heart" style="color: red;"></span></p>
+    </div>
+</div>
+
+</html>

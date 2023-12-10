@@ -1,0 +1,213 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Asegura que los elementos estén distribuidos */
+    padding: 20px 0 50px;
+    border-bottom: 1px solid #ccc; /* Línea divisoria */
+    width: 100%; /* Controla el ancho del encabezado */
+    margin: 0 auto; /* Centra el encabezado */
+}
+
+.notion-icon {
+    width: 50px; /* Tamaño del icono */
+    height: auto;
+    margin-right: 10px;
+}
+
+.notion-title {
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+    font-size: 30px;
+}
+
+/* Estilos del Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 10px; /* Espacio entre el título y el switch */
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Estilos para Modo Oscuro y Claro */
+.dark-mode {
+    background-color: #343a40;
+    color: white;
+}
+
+/* Estilos para los iconos */
+.icon {
+    margin: 50px;
+    display: inline-block;
+    text-align: center; /* Centrar el texto debajo del icono */
+}
+
+/* Ajustes para los iconos */
+.icon img {
+    width: 60px;
+    height: auto;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+.icon:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+.icon .btn {
+    margin-top: 5px; /* Espacio entre el nombre del icono y el botón */
+    /* Otros estilos si necesitas ajustar el botón */
+}
+
+.icon-name {
+    margin-top: 8px; /* Más espacio entre el icono y su nombre */
+    font-size: 1em; /* Tamaño de fuente más grande para el nombre */
+    /* Resto de los estilos existentes... */
+}
+#icons-container {
+    width: 80%; /* Ancho igual al de la línea divisoria */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 10px 0; /* Añadir algo de espacio arriba y abajo */
+    text-align: center; /* Alineación central para los ítems internos */
+
+}
+
+/* Estilos para el texto del switch */
+.theme-switch {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Alinear a la derecha */
+}
+
+.mode-text {
+    margin: 0 10px;
+    font-size: 0.9em;
+    color: #666;
+    transition: color 0.3s;
+}
+
+#switch:checked ~ .dark-mode-text {
+    color: #fff;
+}
+
+#switch:not(:checked) ~ .light-mode-text {
+    color: #333;
+}
+/* ... estilos existentes ... */
+
+.description {
+    width: 80%;
+    margin: 20px auto;
+    font-size: 1.4em;
+    color: #333; /* Color predeterminado para el modo claro */
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+    text-align: center;
+}
+
+.dark-mode .description {
+    color: #fff; /* Cambiar el color del texto en modo oscuro */
+}
+
+.description .notion-word {
+    font-style: italic; /* Hacer cursiva la palabra "Notion" */
+}
+
+.description a {
+    color: #007bff; /* Color del enlace en modo claro */
+}
+
+.dark-mode .description a {
+    color: #9ddffd; /* Cambiar el color del enlace en modo oscuro */
+}
+
+.description a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para la línea divisoria */
+.divider {
+    width: 80%;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+#search-input {
+    margin-top: 20px;
+}
+/* Estilos para el footer */
+.footer {
+    padding: 20px 0;
+    background-color: #f8f9fa; /* Color de fondo claro para el footer */
+    color: #333; /* Color del texto */
+    text-align: center; /* Alineación central del contenido */
+    border-top: 1px solid #ccc; /* Línea divisoria en la parte superior */
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+}
+
+.footer a {
+    color: #007bff; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado en los enlaces */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse sobre los enlaces */
+}
+
+.footer .footer-content {
+    margin: 10px 0; /* Espacio entre los elementos del footer */
+}
+
+.dark-mode .footer {
+    background-color: #343a40; /* Fondo oscuro para el modo oscuro */
+    color: #fff; /* Texto claro para el modo oscuro */
+}
+
+.dark-mode .footer a {
+    color: #9ddffd; /* Color de enlaces para el modo oscuro */
+}
