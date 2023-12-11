@@ -234,5 +234,9 @@
     {
         "name": "Circle",
         "url": "https://img.icons8.com/ios-filled/250/FFFFFF/circled.png"
+    },
+    {
+        "name": "Circle Check",
+        "url": "https://img.icons8.com/ios-filled/250/FFFFFF/checked.png"
     }
 ]
