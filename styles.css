@@ -111,12 +111,12 @@ input:checked + .slider:before {
     /* Resto de los estilos existentes... */
 }
 #icons-container {
-    width: 80%; /* Ancho igual al de la línea divisoria */
-    margin: 0 auto; /* Centrar el contenedor */
-    padding: 10px 0; /* Añadir algo de espacio arriba y abajo */
-    text-align: center; /* Alineación central para los ítems internos */
-
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Crea 3 columnas de igual ancho */
+    gap: 10px; /* Espacio entre los elementos */
 }
+
+
 
 /* Estilos para el texto del switch */
 .theme-switch {
