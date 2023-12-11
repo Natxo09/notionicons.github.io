@@ -122,8 +122,6 @@ input:checked + .slider:before {
 }
 
 
-
-
 /* Estilos para el texto del switch */
 .theme-switch {
     display: flex;
