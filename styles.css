@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between; /* Asegura que los elementos estén distribuidos */
-    padding: 10px 0 50px;
+    padding: 11px 0 50px;
     border-bottom: 1px solid #ccc; /* Línea divisoria */
     width: 100%; /* Controla el ancho del encabezado */
     margin: 0 auto; /* Centra el encabezado */
