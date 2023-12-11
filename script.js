@@ -46,6 +46,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             });
     }
+    function clearSearchBar() {
+        searchInput.value = ''; // Limpia la barra de búsqueda
+        resetIconLayout(); // Restablece la disposición de los iconos si es necesario
+    }
     function copyToClipboard(iconUrl, iconName, button) {
         navigator.clipboard.writeText(iconUrl).then(() => {
             button.textContent = 'Copied';
@@ -59,6 +63,33 @@ document.addEventListener('DOMContentLoaded', function () {
         }).catch((error) => {
             console.error('Error al copiar al portapapeles:', error);
         });
+    }
+
+    function resetIconLayout() {
+        const iconElements = iconsContainer.getElementsByClassName('icon');
+        Array.from(iconElements).forEach(iconElement => {
+            iconElement.style.display = 'inline-block';
+        });
+    }
+
+    function filterIcons() {
+        const searchText = searchInput.value.toLowerCase();
+
+        const iconElements = iconsContainer.getElementsByClassName('icon');
+        Array.from(iconElements).forEach(iconElement => {
+            const nameElement = iconElement.querySelector('.icon-name');
+            const iconName = nameElement.textContent.toLowerCase();
+
+            if (iconName.includes(searchText)) {
+                iconElement.style.display = 'inline-block';
+            } else {
+                iconElement.style.display = 'none';
+            }
+        });
+
+        if (searchText === '') {
+            resetIconLayout();
+        }
     }
 
     function updateTextStyles() {
@@ -77,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loadIcons(theme, iconType);
         notionIcon.src = theme === 'dark' ? 'https://img.icons8.com/ios-filled/250/FFFFFF/notion.png' : 'https://img.icons8.com/ios-filled/250/000000/notion.png';
         updateTextStyles();
+        clearSearchBar(); // Limpia la barra de búsqueda
     });
 
     iconSwitchElement.addEventListener('change', function () {
@@ -84,6 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const iconType = iconSwitchElement.checked ? 'fill' : 'normal';
         loadIcons(theme, iconType);
         updateTextStyles();
+        clearSearchBar(); // Limpia la barra de búsqueda
     });
 
     // Inicialización inicial
