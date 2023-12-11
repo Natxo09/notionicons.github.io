@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             });
     }
-
     function copyToClipboard(iconUrl, iconName, button) {
         navigator.clipboard.writeText(iconUrl).then(() => {
             button.textContent = 'Copied';
