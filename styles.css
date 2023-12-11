@@ -115,6 +115,12 @@ input:checked + .slider:before {
     grid-template-columns: repeat(5, 1fr); /* Crea 3 columnas de igual ancho */
     gap: 10px; /* Espacio entre los elementos */
 }
+@media (max-width: 600px) {
+    #icons-container {
+        grid-template-columns: repeat(2, 1fr); /* Solo 2 iconos por fila en pantallas pequeñas */
+    }
+}
+
 
 
 
