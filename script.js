@@ -1,12 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
     const switchElement = document.querySelector('#switch');
+    const iconSwitchElement = document.querySelector('#icon-switch');
+    const normalText = document.getElementById('normal-text');
+    const fillText = document.getElementById('fill-text');
     const bodyElement = document.body;
     const notionIcon = document.getElementById('notion-icon');
     const iconsContainer = document.getElementById('icons-container');
     const searchInput = document.getElementById('search-input');
 
-    function loadIcons(theme) {
-        fetch(theme === 'dark' ? 'icons-dark.json' : 'icons-light.json')
+    function loadIcons(theme, iconType) {
+        let jsonFile;
+        if (theme === 'dark') {
+            jsonFile = iconType === 'fill' ? 'icons-dark-fill.json' : 'icons-dark.json';
+        } else {
+            jsonFile = iconType === 'fill' ? 'icons-light-fill.json' : 'icons-light.json';
+        }
+
+        fetch(jsonFile)
             .then(response => response.json())
             .then(icons => {
                 iconsContainer.innerHTML = '';
@@ -39,62 +49,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function copyToClipboard(iconUrl, iconName, button) {
         navigator.clipboard.writeText(iconUrl).then(() => {
-            // Cambia el texto y el estilo del botón
             button.textContent = 'Copied';
             button.style.color = 'white';
 
             setTimeout(() => {
-                // Revierte el texto y el estilo del botón después de 2 segundos
                 button.textContent = 'Copy';
-                button.style.backgroundColor = ''; // Elimina el fondo verde personalizado
-                button.style.color = ''; // Restaura el color del texto original
-            }, 2000); // 2000 milisegundos (2 segundos)
+                button.style.backgroundColor = '';
+                button.style.color = '';
+            }, 2000);
         }).catch((error) => {
             console.error('Error al copiar al portapapeles:', error);
         });
     }
 
-    function resetIconLayout() {
-        const iconElements = iconsContainer.getElementsByClassName('icon');
-        Array.from(iconElements).forEach(iconElement => {
-            iconElement.style.display = 'inline-block';
-        });
-    }
-
-    function filterIcons() {
-        const searchText = searchInput.value.toLowerCase();
-
-        // Filtra los iconos por nombre
-        const iconElements = iconsContainer.getElementsByClassName('icon');
-        Array.from(iconElements).forEach(iconElement => {
-            const nameElement = iconElement.querySelector('.icon-name');
-            const iconName = nameElement.textContent.toLowerCase();
-
-            if (iconName.includes(searchText)) {
-                iconElement.style.display = 'inline-block';
-            } else {
-                iconElement.style.display = 'none';
-            }
-        });
-
-        // Verifica si no hay texto de búsqueda y restablece la disposición de los iconos
-        if (searchText === '') {
-            resetIconLayout();
+    function updateTextStyles() {
+        if (iconSwitchElement.checked) {
+            fillText.classList.add('active');
+            normalText.classList.remove('active');
+        } else {
+            normalText.classList.add('active');
+            fillText.classList.remove('active');
         }
     }
 
     switchElement.addEventListener('change', function () {
-        if (bodyElement.classList.toggle('dark-mode')) {
-            notionIcon.src = 'https://img.icons8.com/ios-filled/250/FFFFFF/notion.png'; // Icono para modo oscuro
-            loadIcons('dark');
-        } else {
-            notionIcon.src = 'https://img.icons8.com/ios-filled/250/000000/notion.png'; // Icono para modo claro
-            loadIcons('light');
-        }
+        const theme = bodyElement.classList.toggle('dark-mode') ? 'dark' : 'light';
+        const iconType = iconSwitchElement.checked ? 'fill' : 'normal';
+        loadIcons(theme, iconType);
+        notionIcon.src = theme === 'dark' ? 'https://img.icons8.com/ios-filled/250/FFFFFF/notion.png' : 'https://img.icons8.com/ios-filled/250/000000/notion.png';
+        updateTextStyles();
     });
 
-    loadIcons('light'); // Carga inicial de iconos para el tema claro
+    iconSwitchElement.addEventListener('change', function () {
+        const theme = bodyElement.classList.contains('dark-mode') ? 'dark' : 'light';
+        const iconType = iconSwitchElement.checked ? 'fill' : 'normal';
+        loadIcons(theme, iconType);
+        updateTextStyles();
+    });
 
-    // Agrega un listener para la barra de búsqueda
+    // Inicialización inicial
+    loadIcons('light', 'normal');
+    updateTextStyles();
+
+    // Agregar listener para la barra de búsqueda
     searchInput.addEventListener('input', filterIcons);
 });

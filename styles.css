@@ -215,3 +215,25 @@ input:checked + .slider:before {
 .dark-mode .footer a {
     color: #9ddffd; /* Color de enlaces para el modo oscuro */
 }
+.icon-switch-container {
+    display: flex;
+    justify-content: center;
+    transform: translateX(-12px); /* Ajusta este valor para moverlo a la izquierda */
+    margin-top: 30px;
+}
+.icon-type-text {
+    margin: 0 1px; /* Espaciado alrededor del texto */
+    margin-top: 5px;
+    transition: font-weight 0.3s, color 0.3s; /* Transición suave para los cambios de estilo */
+}
+.icon-type-text-fill {
+    margin: 0 10px; /* Espaciado alrededor del texto */
+    margin-top: 5px;
+    transition: font-weight 0.3s, color 0.3s; /* Transición suave para los cambios de estilo */
+}
+
+.icon-type-text.active, .icon-type-text-fill.active {
+    font-weight: bold;
+    color: red;
+}
+
