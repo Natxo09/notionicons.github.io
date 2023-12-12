@@ -238,5 +238,25 @@
     {
         "name": "Circle Check",
         "url": "https://img.icons8.com/ios/250/FFFFFF/checked.png"
+    },
+    {
+        "name": "Circle Up-Right",
+        "url": "https://img.icons8.com/ios/250/FFFFFF/circled-up-right-2.png"
+    },
+    {
+        "name": "Circle X",
+        "url": "https://img.icons8.com/ios/250/FFFFFF/cancel.png"
+    },
+    {
+        "name": "Cycle",
+        "url": "https://img.icons8.com/ios/250/FFFFFF/synchronize.png"
+    },
+    {
+        "name": "Recurring",
+        "url": "https://img.icons8.com/ios/250/FFFFFF/recurring-appointment.png"
+    },
+    {
+        "name": "Rotate Right",
+        "url": "https://img.icons8.com/ios/250/FFFFFF/rotate-right.png"
     }
 ]
