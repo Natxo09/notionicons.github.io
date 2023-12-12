@@ -258,5 +258,45 @@
     {
         "name": "Rotate Right",
         "url": "https://img.icons8.com/ios-filled/250/000000/rotate-right.png"
+    },
+    {
+        "name": "Browser",
+        "url": "https://img.icons8.com/ios-filled/250/000000/application-window.png"
+    },
+    {
+        "name": "Browser Tab",
+        "url": "https://img.icons8.com/ios-filled/250/000000/tab.png"
+    },
+    {
+        "name": "Browser Heart",
+        "url": "https://img.icons8.com/ios-filled/250/000000/dating-website.png"
+    },
+    {
+        "name": "Code",
+        "url": "https://img.icons8.com/ios-filled/250/000000/source-code.png"
+    },
+    {
+        "name": "MacBook",
+        "url": "https://img.icons8.com/ios-filled/250/000000/macbook.png"
+    },
+    {
+        "name": "Cloud Upload",
+        "url": "https://img.icons8.com/ios-filled/250/000000/upload-2.png"
+    },
+    {
+        "name": "Bookmark",
+        "url": "https://img.icons8.com/ios-filled/250/000000/bookmark-ribbon.png"
+    },
+    {
+        "name": "X",
+        "url": "https://img.icons8.com/ios-filled/250/000000/delete-sign.png"
+    },
+    {
+        "name": "Settings",
+        "url": "https://img.icons8.com/ios-filled/250/000000/settings.png"
+    },
+    {
+        "name": "Database",
+        "url": "https://img.icons8.com/ios-filled/250/000000/database.png"
     }
 ]
