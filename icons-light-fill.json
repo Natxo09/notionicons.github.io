@@ -4,6 +4,10 @@
         "url": "https://img.icons8.com/ios-filled/250/000000/github.png"
     },
     {
+        "name": "Git",
+        "url": "https://img.icons8.com/ios-filled/250/000000/git.png"
+    },
+    {
         "name": "Notion",
         "url": "https://img.icons8.com/ios-filled/250/000000/notion.png"
     },
@@ -48,6 +52,10 @@
         "url": "https://img.icons8.com/ios-filled/250/000000/reddit.png"
     },
     {
+        "name": "Twitch",
+        "url": "https://img.icons8.com/ios-filled/250/000000/twitch.png"
+    },
+    {
         "name": "Spotify",
         "url": "https://img.icons8.com/ios-filled/250/000000/spotify.png"
     },
@@ -70,6 +78,10 @@
     {
         "name": "Microsoft",
         "url": "https://img.icons8.com/ios-filled/250/000000/microsoft.png"
+    },
+    {
+        "name": "Linux",
+        "url": "https://img.icons8.com/ios-filled/250/000000/linux.png"
     },
     {
         "name": "Tumblr",
